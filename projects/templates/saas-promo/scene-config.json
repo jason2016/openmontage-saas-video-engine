@@ -1,0 +1,60 @@
+{
+  "_comment": "SaaS Promo Template — narrative skeleton. Product-agnostic. The build script maps each scene to a cut in the existing Remotion 'Explainer' composition. Do not put product wording here; that lives in projects/<name>/config.json.",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "tailPaddingSeconds": 1
+  },
+  "scenes": [
+    {
+      "key": "problem",
+      "title": "Problem",
+      "component": "stat_card",
+      "accent": "primary",
+      "durationSeconds": 7,
+      "role": "Name the pain the product removes."
+    },
+    {
+      "key": "solution",
+      "title": "Solution",
+      "component": "stat_card",
+      "accent": "primary",
+      "durationSeconds": 7,
+      "role": "Introduce the product as the answer."
+    },
+    {
+      "key": "workflow",
+      "title": "Workflow",
+      "component": "stat_card",
+      "accent": "primary",
+      "durationSeconds": 7.5,
+      "role": "Show how it works in a sentence."
+    },
+    {
+      "key": "security",
+      "title": "Security / Trust",
+      "component": "stat_card",
+      "accent": "success",
+      "durationSeconds": 8,
+      "role": "Establish trust, compliance, safety."
+    },
+    {
+      "key": "benefits",
+      "title": "Benefits",
+      "component": "stat_card",
+      "accent": "success",
+      "durationSeconds": 7,
+      "role": "Why teams choose it."
+    },
+    {
+      "key": "cta",
+      "title": "CTA",
+      "component": "stat_card",
+      "accent": "success",
+      "durationSeconds": 7,
+      "role": "Brand close + call to action. A bottom-left overlay shows the badge and website.",
+      "cta": true
+    }
+  ]
+}

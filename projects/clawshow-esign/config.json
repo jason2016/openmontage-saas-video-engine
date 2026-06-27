@@ -1,0 +1,44 @@
+{
+  "_comment": "ClawShow eSign (Standalone PDF signing — use case 2 only). Config-only project for the SaaS Promo Template. Build: python3 projects/templates/saas-promo/build.py clawshow-esign --out clawshow-esign-v2",
+  "productName": "ClawShow eSign",
+  "website": "clawshow.ai/esign",
+  "logo": "",
+  "eyebrow": "Standalone PDF signing",
+  "brandTagline": "E-signatures, handled.",
+  "primaryColor": "#3B82F6",
+  "successColor": "#22C55E",
+  "backgroundColor": "#0A0E1A",
+  "features": [
+    "Upload any PDF",
+    "OTP identity verification",
+    "AES eIDAS compliant",
+    "SHA-256 audit trail",
+    "Sign on any device"
+  ],
+  "scenes": {
+    "problem": {
+      "headline": "Still emailing PDFs?",
+      "subtitle": "Print, sign, scan, resend — contracts shouldn't be this slow."
+    },
+    "solution": {
+      "headline": "Sign it with ClawShow.",
+      "subtitle": "Standalone PDF e-signatures for any business — no integration required."
+    },
+    "workflow": {
+      "headline": "Upload. Send. Sign.",
+      "subtitle": "Add a PDF, enter the signer's email, ClawShow sends a secure link."
+    },
+    "security": {
+      "headline": "AES eIDAS ready.",
+      "subtitle": "6-digit OTP, timestamp, SHA-256 fingerprint, full audit trail."
+    },
+    "benefits": {
+      "headline": "Close deals faster.",
+      "subtitle": "Sign anywhere, on any device — in minutes, not days."
+    }
+  },
+  "cta": {
+    "tagline": "Send. Sign. Done.",
+    "badge": "AES eIDAS compliant"
+  }
+}

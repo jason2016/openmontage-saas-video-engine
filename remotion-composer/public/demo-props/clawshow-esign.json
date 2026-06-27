@@ -1,0 +1,99 @@
+{
+  "themeConfig": {
+    "primaryColor": "#3B82F6",
+    "accentColor": "#22C55E",
+    "backgroundColor": "#0A0E1A",
+    "surfaceColor": "#0F1629",
+    "textColor": "#F8FAFC",
+    "mutedTextColor": "#94A3B8",
+    "headingFont": "Inter",
+    "bodyFont": "Inter",
+    "monoFont": "JetBrains Mono",
+    "chartColors": ["#3B82F6", "#22C55E", "#38BDF8", "#4ADE80", "#60A5FA", "#34D399"],
+    "springConfig": { "damping": 18, "stiffness": 110, "mass": 1 },
+    "transitionDuration": 0.4,
+    "captionHighlightColor": "#3B82F6",
+    "captionBackgroundColor": "rgba(10, 14, 26, 0.75)"
+  },
+  "cuts": [
+    {
+      "id": "esign-hook",
+      "source": "",
+      "type": "stat_card",
+      "in_seconds": 0,
+      "out_seconds": 7,
+      "stat": "Still emailing PDFs?",
+      "subtitle": "Contracts should not be this hard.",
+      "accentColor": "#3B82F6",
+      "backgroundColor": "#0A0E1A"
+    },
+    {
+      "id": "esign-upload",
+      "source": "",
+      "type": "stat_card",
+      "in_seconds": 7,
+      "out_seconds": 14,
+      "stat": "Upload once.",
+      "subtitle": "Add your PDF contract in seconds.",
+      "accentColor": "#3B82F6",
+      "backgroundColor": "#0A0E1A"
+    },
+    {
+      "id": "esign-send",
+      "source": "",
+      "type": "stat_card",
+      "in_seconds": 14,
+      "out_seconds": 21.5,
+      "stat": "Send in seconds.",
+      "subtitle": "Enter the signer's name and email. ClawShow sends the secure link.",
+      "accentColor": "#3B82F6",
+      "backgroundColor": "#0A0E1A"
+    },
+    {
+      "id": "esign-sign",
+      "source": "",
+      "type": "stat_card",
+      "in_seconds": 21.5,
+      "out_seconds": 29,
+      "stat": "Sign anywhere.",
+      "subtitle": "The client signs online and confirms identity with a 6-digit OTP.",
+      "accentColor": "#3B82F6",
+      "backgroundColor": "#0A0E1A"
+    },
+    {
+      "id": "esign-compliance",
+      "source": "",
+      "type": "stat_card",
+      "in_seconds": 29,
+      "out_seconds": 37,
+      "stat": "AES eIDAS ready.",
+      "subtitle": "OTP, timestamp, SHA-256 fingerprint, audit trail.",
+      "accentColor": "#22C55E",
+      "backgroundColor": "#0A0E1A"
+    },
+    {
+      "id": "esign-close",
+      "source": "",
+      "type": "stat_card",
+      "in_seconds": 37,
+      "out_seconds": 44,
+      "stat": "ClawShow eSign",
+      "subtitle": "Send. Sign. Done.",
+      "accentColor": "#22C55E",
+      "backgroundColor": "#0A0E1A"
+    }
+  ],
+  "overlays": [
+    {
+      "type": "section_title",
+      "in_seconds": 38.5,
+      "out_seconds": 44,
+      "text": "Start signing free",
+      "subtitle": "clawshow.ai/esign",
+      "accentColor": "#22C55E",
+      "position": "bottom-left"
+    }
+  ],
+  "captions": [],
+  "audio": {}
+}

@@ -1,0 +1,13 @@
+{
+  "_comment": "Default dark-SaaS theme tokens (Stripe / Linear / Apple feel). A project overrides only what it needs — typically primaryColor (and optionally successColor / backgroundColor). The build script maps these onto the Explainer composition's themeConfig.",
+  "background": "#0A0E1A",
+  "surface": "#0F1629",
+  "primary": "#3B82F6",
+  "success": "#22C55E",
+  "text": "#F8FAFC",
+  "muted": "#94A3B8",
+  "headingFont": "Inter",
+  "bodyFont": "Inter",
+  "monoFont": "JetBrains Mono",
+  "_chartColorsNote": "build.py composes chartColors as [primary, success, ...fixed tints] so the animated background's orbs stay on-brand."
+}

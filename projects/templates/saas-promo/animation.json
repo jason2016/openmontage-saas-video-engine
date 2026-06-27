@@ -1,0 +1,11 @@
+{
+  "_comment": "Motion + pacing language for the template. Deliberately calm (Stripe / Linear / Arc): fade, slide, scale, subtle motion only — no flashy effects. The scene components carry their own spring entrances; this file controls pacing (durations) and the CTA overlay timing, and records the intended motion contract.",
+  "style": "calm",
+  "allowedMotion": ["fade", "slide", "scale", "subtle-drift"],
+  "disallowedMotion": ["spin", "flash", "bounce-heavy", "glitch", "3d-flip"],
+  "springConfig": { "damping": 18, "stiffness": 110, "mass": 1 },
+  "transitionDurationSeconds": 0.4,
+  "sceneDefaultDurationSeconds": 7,
+  "ctaOverlayLeadSeconds": 1.5,
+  "backgroundMotion": "slow gradient mesh + low-opacity floating orbs, continuous across all scenes"
+}

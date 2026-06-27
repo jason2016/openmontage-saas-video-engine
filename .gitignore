@@ -1,0 +1,101 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# OpenMontage SaaS Video Engine — .gitignore
+# Goal: ship source + configs + templates; never ship secrets, deps, or media.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Python ───────────────────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── Node / Remotion composer ─────────────────────────────────────────────────
+node_modules/
+remotion-composer/node_modules/
+remotion-composer/out/
+# Remotion copies project assets into public/ at render time (regenerable),
+# but the curated zero-key demo props are part of the project and ARE shipped.
+remotion-composer/public/*
+!remotion-composer/public/demo-props/
+# Scratch/test compositions inside demo-props (keep only curated demos)
+remotion-composer/public/demo-props/test-*
+remotion-composer/public/demo-props/talking-head-*
+remotion-composer/public/demo-props/caption-burn-*
+# Out-of-scope product demo (FocusingPro) — excluded from this public repo
+remotion-composer/public/demo-props/focusflow-pitch.json
+
+# ── Build / dist / cache ─────────────────────────────────────────────────────
+dist/
+build/
+.cache/
+tmp/
+logs/
+
+# ── Generated media (renders are regenerable; never commit large binaries) ───
+projects/**/renders/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# ── Render / run logs (scratch; leak local paths) ────────────────────────────
+*.log
+
+# ── Local model downloads (Piper TTS voices etc., fetched at runtime) ────────
+*.onnx
+*.onnx.json
+
+# ── Secrets & credentials — NEVER COMMIT ─────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+.youtube-token.json
+*token*.json
+gcp-*.json
+*-service-account.json
+service-account*.json
+service_account*.json
+*.pem
+*.key
+# The committed template with empty placeholders is intentional:
+!.env.example
+
+# ── Upstream OpenMontage regenerable workspaces ──────────────────────────────
+output/
+pipeline/
+tests/qa/output/
+corpus/
+**/corpus/
+music_library/
+scratch/
+internal/
+
+# ── Generated images / downloaded music (not source) ─────────────────────────
+logo_*.png
+generated_image.png
+pixabay_music_*
+pexels_video_*.mp4
+
+# ── Local agent / IDE config ─────────────────────────────────────────────────
+.claude/memory/
+.claude/settings.local.json
+.cursor/memory/
+.idea/
+.vscode/
+.trae/
+skills-lock.json
+
+# ── OS noise ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

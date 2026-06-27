@@ -1,0 +1,86 @@
+{
+  "brand": {
+    "primary": "#3B82F6",
+    "success": "#22C55E",
+    "canvas": "#0A0E1A"
+  },
+  "scenes": [
+    {
+      "id": "problem",
+      "type": "problem",
+      "durationSeconds": 6.0,
+      "props": {
+        "headline": "Still emailing PDFs?",
+        "subtitle": "Print, sign, scan, resend — contracts shouldn't be this slow.",
+        "stalledIndex": 0
+      }
+    },
+    {
+      "id": "brand",
+      "type": "brand",
+      "durationSeconds": 6.0,
+      "props": {
+        "eyebrow": "Standalone PDF signing",
+        "productName": "ClawShow eSign",
+        "tagline": "E-signatures, handled."
+      }
+    },
+    {
+      "id": "upload",
+      "type": "upload",
+      "durationSeconds": 7.5,
+      "props": {
+        "url": "app.clawshow.ai",
+        "docTitle": "Service Agreement.pdf",
+        "caption": "Upload any PDF",
+        "toast": "PDF added"
+      }
+    },
+    {
+      "id": "send",
+      "type": "send",
+      "durationSeconds": 7.0,
+      "props": {
+        "fromLabel": "ClawShow eSign",
+        "toLabel": "Signer inbox",
+        "subject": "Please sign: Service Agreement.pdf",
+        "caption": "Send in seconds",
+        "secure": true
+      }
+    },
+    {
+      "id": "sign",
+      "type": "sign",
+      "durationSeconds": 8.5,
+      "props": {
+        "docTitle": "Agreement",
+        "otp": "284913",
+        "caption": "Sign anywhere — verified by OTP",
+        "verifiedLabel": "Identity verified"
+      }
+    },
+    {
+      "id": "trust",
+      "type": "trust",
+      "durationSeconds": 8.0,
+      "props": {
+        "headline": "AES eIDAS ready.",
+        "subtitle": "6-digit OTP, timestamp, SHA-256 fingerprint, full audit trail.",
+        "badge": "AES eIDAS compliant",
+        "fingerprint": "SHA-256  3f9a 7c12 b80e … a4d1"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "durationSeconds": 7.5,
+      "props": {
+        "productName": "ClawShow eSign",
+        "badge": "AES eIDAS compliant",
+        "tagline": "Send. Sign. Done.",
+        "buttonLabel": "Start free",
+        "url": "clawshow.ai/esign"
+      }
+    }
+  ]
+}
