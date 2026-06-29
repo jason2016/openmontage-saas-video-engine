@@ -46,7 +46,7 @@ const PARTIES = {
     label: "LE CLIENT",
     raison: "Studio Méridien (société de démonstration)",
     adresse: "12 rue de la Démonstration, 75000 Paris (adresse fictive)",
-    repr: "M. Robin Hardy, en qualité de Directeur",
+    repr: "M. Marc Delorme, en qualité de Directeur",
     email: "demo-client@example.com",
   },
   prestataire: {
@@ -187,7 +187,7 @@ export const ContractDocument: React.FC<ContractDocumentProps> = ({
         <div style={{ height: 70, borderRadius: 8, border: `1.5px dashed ${DOC.faint}`, background: "#FBFCFE", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
           {signed}
         </div>
-        <div style={{ color: DOC.muted, fontSize: 10.5 * s, marginTop: 8 }}>M. Robin Hardy · Directeur · Studio Méridien</div>
+        <div style={{ color: DOC.muted, fontSize: 10.5 * s, marginTop: 8 }}>M. Marc Delorme · Directeur · Studio Méridien</div>
       </div>
     );
 
@@ -319,7 +319,7 @@ export const ContractDocument: React.FC<ContractDocumentProps> = ({
           >
             {signed}
           </div>
-          <div style={{ color: DOC.muted, fontSize: 11, marginTop: 7 }}>M. Robin Hardy · Directeur · Studio Méridien</div>
+          <div style={{ color: DOC.muted, fontSize: 11, marginTop: 7 }}>M. Marc Delorme · Directeur · Studio Méridien</div>
         </div>
       </div>
     );

@@ -37,20 +37,6 @@
       }
     },
     {
-      "id": "upload",
-      "type": "upload",
-      "durationSeconds": 7.0,
-      "camera": "pan-right",
-      "props": {
-        "url": "app.clawshow.ai",
-        "docTitle": "Contrat de prestation de services.pdf",
-        "toast": "PDF added",
-        "caption": "Open any contract",
-        "contract": true,
-        "workspace": true
-      }
-    },
-    {
       "id": "invite",
       "type": "invite-flow",
       "durationSeconds": 6.0,
@@ -65,49 +51,6 @@
           { "label": "Email sent", "sub": "To demo-client@example.com", "icon": "mail" },
           { "label": "Signer inbox", "sub": "Delivered · message opened", "icon": "inbox" },
           { "label": "Awaiting signature", "sub": "Single-use link · expires in 7 days", "icon": "clock" }
-        ]
-      }
-    },
-    {
-      "id": "otp",
-      "type": "otp",
-      "durationSeconds": 5.6,
-      "camera": "push",
-      "props": {
-        "phoneHint": "+1 ••• 4821",
-        "otp": "284913",
-        "headline": "One code. One signer.",
-        "verifiedLabel": "Identity verified"
-      }
-    },
-    {
-      "id": "sign",
-      "type": "sign",
-      "durationSeconds": 7.5,
-      "camera": "pan-right",
-      "props": {
-        "docTitle": "Contrat de prestation de services",
-        "headline": "Sign on any device.",
-        "subtitle": "Draw once. Bound everywhere — desktop, tablet or phone.",
-        "signedLabel": "Signed",
-        "contract": true,
-        "autoscroll": true
-      }
-    },
-    {
-      "id": "audit",
-      "type": "audit",
-      "durationSeconds": 6.0,
-      "camera": "push",
-      "props": {
-        "headline": "Every step, recorded.",
-        "subtitle": "A tamper-evident trail behind every signature.",
-        "fingerprint": "SHA-256  3f9a 7c12 b80e … a4d1",
-        "auditEntries": [
-          { "action": "Document sent", "actor": "demo-prestataire@example.com", "timestamp": "09:42:11" },
-          { "action": "Opened by signer", "actor": "demo-client@example.com", "timestamp": "09:55:03" },
-          { "action": "Identity verified · OTP", "actor": "+1 ••• 4821", "timestamp": "09:55:46" },
-          { "action": "Signed", "actor": "Marc Delorme", "timestamp": "09:56:20" }
         ]
       }
     },
