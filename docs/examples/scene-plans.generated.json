@@ -1,0 +1,1747 @@
+{
+  "clawshow-esign": {
+    "productType": "saas",
+    "platform": "website",
+    "aspectRatio": "16:9",
+    "objective": "conversion",
+    "profile": "saas",
+    "preferredStyle": "clean-professional",
+    "decisions": [
+      {
+        "sceneId": "s1",
+        "purpose": "hook",
+        "intent": [
+          "brand",
+          "open"
+        ],
+        "preferred": "scene.saas.brand",
+        "preferredName": "BrandSceneV51",
+        "fallback": "ui.saas.logo",
+        "fallbackName": "Logo (ClawShow)",
+        "score": 88.96,
+        "breakdown": {
+          "intent": 19.42,
+          "controllability": 16.78,
+          "visualQuality": 13.4,
+          "brand": 14.85,
+          "realism": 1.7,
+          "stability": 11.65,
+          "reuse": 2.67,
+          "speed": 4.13,
+          "cost": 2.91,
+          "privacy": 1.46,
+          "total": 88.96
+        },
+        "reason": "BrandSceneV51 (scene.saas.brand) scored 88.96/100 for 'hook' · deterministic · zero-key · stability:none/native · profile:saas",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s2",
+        "purpose": "problem",
+        "intent": [
+          "problem",
+          "pain"
+        ],
+        "preferred": "scene.saas.problem",
+        "preferredName": "ProblemSceneV51",
+        "fallback": "ui.saas.cta_hero",
+        "fallbackName": "CTAHero",
+        "score": 86.05,
+        "breakdown": {
+          "intent": 16.5,
+          "controllability": 16.78,
+          "visualQuality": 13.4,
+          "brand": 14.85,
+          "realism": 1.7,
+          "stability": 11.65,
+          "reuse": 2.67,
+          "speed": 4.13,
+          "cost": 2.91,
+          "privacy": 1.46,
+          "total": 86.05
+        },
+        "reason": "ProblemSceneV51 (scene.saas.problem) scored 86.05/100 for 'problem' · deterministic · zero-key · stability:none/native · profile:saas",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s3",
+        "purpose": "demo-upload",
+        "intent": [
+          "demo",
+          "upload",
+          "document"
+        ],
+        "preferred": "scene.saas.upload",
+        "preferredName": "UploadSceneV512",
+        "fallback": "ui.saas.cursor",
+        "fallbackName": "Cursor",
+        "score": 88.96,
+        "breakdown": {
+          "intent": 19.42,
+          "controllability": 16.78,
+          "visualQuality": 13.4,
+          "brand": 14.85,
+          "realism": 1.7,
+          "stability": 11.65,
+          "reuse": 2.67,
+          "speed": 4.13,
+          "cost": 2.91,
+          "privacy": 1.46,
+          "total": 88.96
+        },
+        "reason": "UploadSceneV512 (scene.saas.upload) scored 88.96/100 for 'demo-upload' · deterministic · zero-key · stability:none/native · profile:saas",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": [
+          "Readable text → Stable Overlay (native); enforce Gate F (scale=1, integer geometry, opacity entrance)."
+        ]
+      },
+      {
+        "sceneId": "s4",
+        "purpose": "verify",
+        "intent": [
+          "otp",
+          "verify",
+          "security"
+        ],
+        "preferred": "scene.saas.otp",
+        "preferredName": "OtpSceneV512",
+        "fallback": "ui.saas.cta_hero",
+        "fallbackName": "CTAHero",
+        "score": 86.05,
+        "breakdown": {
+          "intent": 16.5,
+          "controllability": 16.78,
+          "visualQuality": 13.4,
+          "brand": 14.85,
+          "realism": 1.7,
+          "stability": 11.65,
+          "reuse": 2.67,
+          "speed": 4.13,
+          "cost": 2.91,
+          "privacy": 1.46,
+          "total": 86.05
+        },
+        "reason": "OtpSceneV512 (scene.saas.otp) scored 86.05/100 for 'verify' · deterministic · zero-key · stability:none/native · profile:saas",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": [
+          "Readable text → Stable Overlay (native); enforce Gate F (scale=1, integer geometry, opacity entrance)."
+        ]
+      },
+      {
+        "sceneId": "s5",
+        "purpose": "proof-audit",
+        "intent": [
+          "audit",
+          "trail",
+          "trust"
+        ],
+        "preferred": "scene.saas.audit",
+        "preferredName": "AuditSceneV512",
+        "fallback": "ui.saas.audit_trail_stable",
+        "fallbackName": "AuditTrailStable",
+        "score": 86.05,
+        "breakdown": {
+          "intent": 16.5,
+          "controllability": 16.78,
+          "visualQuality": 13.4,
+          "brand": 14.85,
+          "realism": 1.7,
+          "stability": 11.65,
+          "reuse": 2.67,
+          "speed": 4.13,
+          "cost": 2.91,
+          "privacy": 1.46,
+          "total": 86.05
+        },
+        "reason": "AuditSceneV512 (scene.saas.audit) scored 86.05/100 for 'proof-audit' · deterministic · zero-key · stability:none/native · profile:saas",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": [
+          "Readable text → Stable Overlay (native); enforce Gate F (scale=1, integer geometry, opacity entrance)."
+        ]
+      },
+      {
+        "sceneId": "s6",
+        "purpose": "compliance",
+        "intent": [
+          "compliance",
+          "standards",
+          "trust"
+        ],
+        "preferred": "scene.saas.compliance",
+        "preferredName": "ComplianceSceneV512",
+        "fallback": "ui.saas.cta_hero",
+        "fallbackName": "CTAHero",
+        "score": 86.05,
+        "breakdown": {
+          "intent": 16.5,
+          "controllability": 16.78,
+          "visualQuality": 13.4,
+          "brand": 14.85,
+          "realism": 1.7,
+          "stability": 11.65,
+          "reuse": 2.67,
+          "speed": 4.13,
+          "cost": 2.91,
+          "privacy": 1.46,
+          "total": 86.05
+        },
+        "reason": "ComplianceSceneV512 (scene.saas.compliance) scored 86.05/100 for 'compliance' · deterministic · zero-key · stability:none/native · profile:saas",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": [
+          "Readable text → Stable Overlay (native); enforce Gate F (scale=1, integer geometry, opacity entrance)."
+        ]
+      },
+      {
+        "sceneId": "s7",
+        "purpose": "cta",
+        "intent": [
+          "cta",
+          "signup",
+          "close"
+        ],
+        "preferred": "scene.saas.cta",
+        "preferredName": "CtaSceneV51",
+        "fallback": "ui.saas.cta_hero",
+        "fallbackName": "CTAHero",
+        "score": 88.96,
+        "breakdown": {
+          "intent": 19.42,
+          "controllability": 16.78,
+          "visualQuality": 13.4,
+          "brand": 14.85,
+          "realism": 1.7,
+          "stability": 11.65,
+          "reuse": 2.67,
+          "speed": 4.13,
+          "cost": 2.91,
+          "privacy": 1.46,
+          "total": 88.96
+        },
+        "reason": "CtaSceneV51 (scene.saas.cta) scored 88.96/100 for 'cta' · deterministic · zero-key · stability:none/native · profile:saas",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": []
+      }
+    ],
+    "planWarnings": []
+  },
+  "online-education": {
+    "productType": "education",
+    "platform": "youtube",
+    "aspectRatio": "16:9",
+    "objective": "education",
+    "profile": "education",
+    "preferredStyle": "clean-professional",
+    "decisions": [
+      {
+        "sceneId": "s1",
+        "purpose": "hook-title",
+        "intent": [
+          "title",
+          "open",
+          "education"
+        ],
+        "preferred": "scene.om.hero_title",
+        "preferredName": "HeroTitle",
+        "fallback": "comp.om.titled_video",
+        "fallbackName": "TitledVideo",
+        "score": 76.4,
+        "breakdown": {
+          "intent": 18.06,
+          "controllability": 14.84,
+          "visualQuality": 12.25,
+          "brand": 8.75,
+          "realism": 2.08,
+          "stability": 4.79,
+          "reuse": 5.83,
+          "speed": 4.69,
+          "cost": 3.13,
+          "privacy": 1.98,
+          "total": 76.4
+        },
+        "reason": "HeroTitle (scene.om.hero_title) scored 76.4/100 for 'hook-title' · deterministic · zero-key · stability:high/compatible · profile:education",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s2",
+        "purpose": "desire",
+        "intent": [
+          "problem",
+          "explain"
+        ],
+        "preferred": "comp.om.talking_head",
+        "preferredName": "TalkingHead",
+        "fallback": "scene.om.callout",
+        "fallbackName": "CalloutBox",
+        "score": 78.63,
+        "breakdown": {
+          "intent": 16.15,
+          "controllability": 14.06,
+          "visualQuality": 11.96,
+          "brand": 8.75,
+          "realism": 5.42,
+          "stability": 7.92,
+          "reuse": 5.1,
+          "speed": 4.17,
+          "cost": 3.13,
+          "privacy": 1.98,
+          "total": 78.63
+        },
+        "reason": "TalkingHead (comp.om.talking_head) scored 78.63/100 for 'desire' · deterministic · zero-key · stability:low/n/a · profile:education",
+        "requiredInputs": [
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s3",
+        "purpose": "curriculum",
+        "intent": [
+          "steps",
+          "process",
+          "progress"
+        ],
+        "preferred": "ui.saas.timeline",
+        "preferredName": "Timeline",
+        "fallback": "scene.om.progress_bar",
+        "fallbackName": "ProgressBar",
+        "score": 79.78,
+        "breakdown": {
+          "intent": 11.81,
+          "controllability": 14.84,
+          "visualQuality": 13.13,
+          "brand": 11,
+          "realism": 2.92,
+          "stability": 10.42,
+          "reuse": 6.2,
+          "speed": 4.58,
+          "cost": 3.13,
+          "privacy": 1.77,
+          "total": 79.78
+        },
+        "reason": "Timeline (ui.saas.timeline) scored 79.78/100 for 'curriculum' · deterministic · zero-key · stability:none/native · profile:education",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 15,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s4",
+        "purpose": "lesson-demo",
+        "intent": [
+          "demo",
+          "ui-walkthrough",
+          "screen"
+        ],
+        "preferred": "scene.om.screenshot_scene",
+        "preferredName": "ScreenshotScene",
+        "fallback": "ui.saas.cursor",
+        "fallbackName": "Cursor",
+        "score": 81.15,
+        "breakdown": {
+          "intent": 18.06,
+          "controllability": 14.84,
+          "visualQuality": 11.38,
+          "brand": 8.75,
+          "realism": 2.08,
+          "stability": 10.42,
+          "reuse": 5.83,
+          "speed": 4.69,
+          "cost": 3.13,
+          "privacy": 1.98,
+          "total": 81.15
+        },
+        "reason": "ScreenshotScene (scene.om.screenshot_scene) scored 81.15/100 for 'lesson-demo' · deterministic · zero-key · stability:none/native · profile:education",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": [
+          "Readable text → Stable Overlay (native); enforce Gate F (scale=1, integer geometry, opacity entrance)."
+        ]
+      },
+      {
+        "sceneId": "s5",
+        "purpose": "progress-proof",
+        "intent": [
+          "progress",
+          "metrics",
+          "proof"
+        ],
+        "preferred": "scene.om.kpi_grid",
+        "preferredName": "KPIGrid",
+        "fallback": "ui.saas.status_flow_stable",
+        "fallbackName": "StatusFlowStable",
+        "score": 81.11,
+        "breakdown": {
+          "intent": 18.06,
+          "controllability": 14.84,
+          "visualQuality": 11.96,
+          "brand": 8.75,
+          "realism": 2.08,
+          "stability": 9.79,
+          "reuse": 5.83,
+          "speed": 4.69,
+          "cost": 3.13,
+          "privacy": 1.98,
+          "total": 81.11
+        },
+        "reason": "KPIGrid (scene.om.kpi_grid) scored 81.11/100 for 'progress-proof' · deterministic · zero-key · stability:none/compatible · profile:education",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s6",
+        "purpose": "teacher-trust",
+        "intent": [
+          "presenter",
+          "trust"
+        ],
+        "preferred": "ui.saas.verification_badge",
+        "preferredName": "VerificationBadge",
+        "fallback": "scene.om.progress_bar",
+        "fallbackName": "ProgressBar",
+        "score": 73.71,
+        "breakdown": {
+          "intent": 5.73,
+          "controllability": 14.84,
+          "visualQuality": 13.13,
+          "brand": 11,
+          "realism": 2.92,
+          "stability": 10.42,
+          "reuse": 6.2,
+          "speed": 4.58,
+          "cost": 3.13,
+          "privacy": 1.77,
+          "total": 73.71
+        },
+        "reason": "VerificationBadge (ui.saas.verification_badge) scored 73.71/100 for 'teacher-trust' · deterministic · zero-key · stability:none/native · profile:education",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 15,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s7",
+        "purpose": "enroll-cta",
+        "intent": [
+          "cta",
+          "signup",
+          "close"
+        ],
+        "preferred": "scene.saas.cta",
+        "preferredName": "CtaSceneV51",
+        "fallback": "ui.saas.cta_hero",
+        "fallbackName": "CTAHero",
+        "score": 76.96,
+        "breakdown": {
+          "intent": 11.46,
+          "controllability": 15,
+          "visualQuality": 13.42,
+          "brand": 10.63,
+          "realism": 2.92,
+          "stability": 10.42,
+          "reuse": 4.01,
+          "speed": 4.43,
+          "cost": 3.13,
+          "privacy": 1.56,
+          "total": 76.96
+        },
+        "reason": "CtaSceneV51 (scene.saas.cta) scored 76.96/100 for 'enroll-cta' · deterministic · zero-key · stability:none/native · profile:education",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:HEYGEN_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": []
+      }
+    ],
+    "planWarnings": []
+  },
+  "longcheng-restaurant": {
+    "productType": "restaurant",
+    "platform": "instagram",
+    "aspectRatio": "9:16",
+    "objective": "awareness",
+    "profile": "restaurant",
+    "preferredStyle": "flat-motion-graphics",
+    "decisions": [
+      {
+        "sceneId": "s1",
+        "purpose": "hook-atmosphere",
+        "intent": [
+          "atmosphere",
+          "real-media",
+          "broll"
+        ],
+        "preferred": "tool.direct_clip_search",
+        "preferredName": "DirectClipSearch",
+        "fallback": "scene.om.anime_scene",
+        "fallbackName": "AnimeScene",
+        "score": 76.88,
+        "breakdown": {
+          "intent": 13.67,
+          "controllability": 7.2,
+          "visualQuality": 11.2,
+          "brand": 4.8,
+          "realism": 21.12,
+          "stability": 5.74,
+          "reuse": 4.25,
+          "speed": 4,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 76.88
+        },
+        "reason": "DirectClipSearch (tool.direct_clip_search) scored 76.88/100 for 'hook-atmosphere' · deterministic · zero-key · stability:n/a/n/a · profile:restaurant",
+        "requiredInputs": [
+          "text"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s2",
+        "purpose": "signature-dish",
+        "intent": [
+          "real-media",
+          "broll"
+        ],
+        "preferred": "tool.direct_clip_search",
+        "preferredName": "DirectClipSearch",
+        "fallback": "scene.om.anime_scene",
+        "fallbackName": "AnimeScene",
+        "score": 78.71,
+        "breakdown": {
+          "intent": 15.5,
+          "controllability": 7.2,
+          "visualQuality": 11.2,
+          "brand": 4.8,
+          "realism": 21.12,
+          "stability": 5.74,
+          "reuse": 4.25,
+          "speed": 4,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 78.71
+        },
+        "reason": "DirectClipSearch (tool.direct_clip_search) scored 78.71/100 for 'signature-dish' · deterministic · zero-key · stability:n/a/n/a · profile:restaurant",
+        "requiredInputs": [
+          "text"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": [
+          "Diversity: same scene 'tool.direct_clip_search' on adjacent beats (Gate C)."
+        ]
+      },
+      {
+        "sceneId": "s3",
+        "purpose": "menu",
+        "intent": [
+          "compare",
+          "metric"
+        ],
+        "preferred": "scene.om.anime_scene",
+        "preferredName": "AnimeScene",
+        "fallback": "comp.om.cinematic_renderer",
+        "fallbackName": "CinematicRenderer",
+        "score": 70.14,
+        "breakdown": {
+          "intent": 10,
+          "controllability": 7.6,
+          "visualQuality": 12.48,
+          "brand": 8.4,
+          "realism": 12.1,
+          "stability": 6.16,
+          "reuse": 4,
+          "speed": 4.5,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 70.14
+        },
+        "reason": "AnimeScene (scene.om.anime_scene) scored 70.14/100 for 'menu' · deterministic · zero-key · stability:n/a/compatible · profile:restaurant",
+        "requiredInputs": [
+          "images"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s4",
+        "purpose": "reviews",
+        "intent": [
+          "quote",
+          "trust"
+        ],
+        "preferred": "ui.saas.verification_badge",
+        "preferredName": "VerificationBadge",
+        "fallback": "scene.om.text_card",
+        "fallbackName": "TextCard",
+        "score": 66.11,
+        "breakdown": {
+          "intent": 5.5,
+          "controllability": 7.6,
+          "visualQuality": 14.4,
+          "brand": 10.56,
+          "realism": 7.7,
+          "stability": 7,
+          "reuse": 4.25,
+          "speed": 4.4,
+          "cost": 3,
+          "privacy": 1.7,
+          "total": 66.11
+        },
+        "reason": "VerificationBadge (ui.saas.verification_badge) scored 66.11/100 for 'reviews' · deterministic · zero-key · stability:none/native · profile:restaurant",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 15,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s5",
+        "purpose": "location",
+        "intent": [
+          "location",
+          "map"
+        ],
+        "preferred": "comp.om.cinematic_renderer",
+        "preferredName": "CinematicRenderer",
+        "fallback": "comp.om.collage_burst",
+        "fallbackName": "CollageBurst",
+        "score": 65.64,
+        "breakdown": {
+          "intent": 6,
+          "controllability": 7.2,
+          "visualQuality": 13.12,
+          "brand": 8.4,
+          "realism": 13.2,
+          "stability": 5.32,
+          "reuse": 3.5,
+          "speed": 4,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 65.64
+        },
+        "reason": "CinematicRenderer (comp.om.cinematic_renderer) scored 65.64/100 for 'location' · deterministic · zero-key · stability:low/n/a · profile:restaurant",
+        "requiredInputs": [
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s6",
+        "purpose": "reservation-cta",
+        "intent": [
+          "cta",
+          "signup",
+          "close"
+        ],
+        "preferred": "ui.saas.cta_hero",
+        "preferredName": "CTAHero",
+        "fallback": "comp.om.collage_burst",
+        "fallbackName": "CollageBurst",
+        "score": 71.94,
+        "breakdown": {
+          "intent": 11.33,
+          "controllability": 7.6,
+          "visualQuality": 14.4,
+          "brand": 10.56,
+          "realism": 7.7,
+          "stability": 7,
+          "reuse": 4.25,
+          "speed": 4.4,
+          "cost": 3,
+          "privacy": 1.7,
+          "total": 71.94
+        },
+        "reason": "CTAHero (ui.saas.cta_hero) scored 71.94/100 for 'reservation-cta' · deterministic · zero-key · stability:none/native · profile:restaurant",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:PEXELS_API_KEY",
+          "missing-api-key:PIXABAY_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 15,
+        "professionalWarnings": []
+      }
+    ],
+    "planWarnings": []
+  },
+  "inventory-saas": {
+    "productType": "inventory-erp",
+    "platform": "linkedin",
+    "aspectRatio": "16:9",
+    "objective": "demo",
+    "profile": "inventory-erp",
+    "preferredStyle": "clean-professional",
+    "decisions": [
+      {
+        "sceneId": "s1",
+        "purpose": "brand",
+        "intent": [
+          "brand",
+          "open"
+        ],
+        "preferred": "scene.saas.brand",
+        "preferredName": "BrandSceneV51",
+        "fallback": "ui.saas.contracts_workspace",
+        "fallbackName": "ContractsWorkspace",
+        "score": 86.07,
+        "breakdown": {
+          "intent": 16.83,
+          "controllability": 17.11,
+          "visualQuality": 13.66,
+          "brand": 13.47,
+          "realism": 1.73,
+          "stability": 11.88,
+          "reuse": 2.72,
+          "speed": 4.21,
+          "cost": 2.97,
+          "privacy": 1.49,
+          "total": 86.07
+        },
+        "reason": "BrandSceneV51 (scene.saas.brand) scored 86.07/100 for 'brand' · deterministic · zero-key · stability:none/native · profile:inventory-erp",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s2",
+        "purpose": "dashboard",
+        "intent": [
+          "dashboard",
+          "ui-walkthrough",
+          "screen"
+        ],
+        "preferred": "ui.saas.contracts_workspace",
+        "preferredName": "ContractsWorkspace",
+        "fallback": "scene.om.screenshot_scene",
+        "fallbackName": "ScreenshotScene",
+        "score": 84.6,
+        "breakdown": {
+          "intent": 13.53,
+          "controllability": 16.93,
+          "visualQuality": 13.37,
+          "brand": 13.94,
+          "realism": 1.73,
+          "stability": 11.88,
+          "reuse": 4.21,
+          "speed": 4.36,
+          "cost": 2.97,
+          "privacy": 1.68,
+          "total": 84.6
+        },
+        "reason": "ContractsWorkspace (ui.saas.contracts_workspace) scored 84.6/100 for 'dashboard' · deterministic · zero-key · stability:none/native · profile:inventory-erp",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 15,
+        "professionalWarnings": [
+          "Readable text → Stable Overlay (native); enforce Gate F (scale=1, integer geometry, opacity entrance)."
+        ]
+      },
+      {
+        "sceneId": "s3",
+        "purpose": "stock-table",
+        "intent": [
+          "table",
+          "data",
+          "workflow"
+        ],
+        "preferred": "scene.om.bar_chart",
+        "preferredName": "BarChart",
+        "fallback": "ui.saas.browser_window",
+        "fallbackName": "BrowserWindow",
+        "score": 78.81,
+        "breakdown": {
+          "intent": 13.53,
+          "controllability": 16.93,
+          "visualQuality": 11.58,
+          "brand": 11.09,
+          "realism": 1.24,
+          "stability": 11.17,
+          "reuse": 3.96,
+          "speed": 4.46,
+          "cost": 2.97,
+          "privacy": 1.88,
+          "total": 78.81
+        },
+        "reason": "BarChart (scene.om.bar_chart) scored 78.81/100 for 'stock-table' · deterministic · zero-key · stability:none/compatible · profile:inventory-erp",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": [
+          "Readable text → Stable Overlay (compatible); enforce Gate F (scale=1, integer geometry, opacity entrance)."
+        ]
+      },
+      {
+        "sceneId": "s4",
+        "purpose": "kpi-proof",
+        "intent": [
+          "metric",
+          "proof",
+          "dashboard"
+        ],
+        "preferred": "scene.om.kpi_grid",
+        "preferredName": "KPIGrid",
+        "fallback": "overlay.om.stat_reveal",
+        "fallbackName": "StatReveal",
+        "score": 83.03,
+        "breakdown": {
+          "intent": 17.16,
+          "controllability": 16.93,
+          "visualQuality": 12.18,
+          "brand": 11.09,
+          "realism": 1.24,
+          "stability": 11.17,
+          "reuse": 3.96,
+          "speed": 4.46,
+          "cost": 2.97,
+          "privacy": 1.88,
+          "total": 83.03
+        },
+        "reason": "KPIGrid (scene.om.kpi_grid) scored 83.03/100 for 'kpi-proof' · deterministic · zero-key · stability:none/compatible · profile:inventory-erp",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s5",
+        "purpose": "alert-workflow",
+        "intent": [
+          "alert",
+          "workflow",
+          "status"
+        ],
+        "preferred": "ui.saas.status_flow_stable",
+        "preferredName": "StatusFlowStable",
+        "fallback": "ui.saas.browser_window",
+        "fallbackName": "BrowserWindow",
+        "score": 80.64,
+        "breakdown": {
+          "intent": 9.57,
+          "controllability": 16.93,
+          "visualQuality": 13.37,
+          "brand": 13.94,
+          "realism": 1.73,
+          "stability": 11.88,
+          "reuse": 4.21,
+          "speed": 4.36,
+          "cost": 2.97,
+          "privacy": 1.68,
+          "total": 80.64
+        },
+        "reason": "StatusFlowStable (ui.saas.status_flow_stable) scored 80.64/100 for 'alert-workflow' · deterministic · zero-key · stability:none/native · profile:inventory-erp",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 15,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s6",
+        "purpose": "mobile-view",
+        "intent": [
+          "mobile",
+          "app"
+        ],
+        "preferred": "ui.saas.phone_mockup",
+        "preferredName": "PhoneMockup",
+        "fallback": "scene.saas.sign",
+        "fallbackName": "SignSceneV511",
+        "score": 87.9,
+        "breakdown": {
+          "intent": 16.83,
+          "controllability": 16.93,
+          "visualQuality": 13.37,
+          "brand": 13.94,
+          "realism": 1.73,
+          "stability": 11.88,
+          "reuse": 4.21,
+          "speed": 4.36,
+          "cost": 2.97,
+          "privacy": 1.68,
+          "total": 87.9
+        },
+        "reason": "PhoneMockup (ui.saas.phone_mockup) scored 87.9/100 for 'mobile-view' · deterministic · zero-key · stability:none/native · profile:inventory-erp",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 15,
+        "professionalWarnings": [
+          "Readable text → Stable Overlay (native); enforce Gate F (scale=1, integer geometry, opacity entrance)."
+        ]
+      },
+      {
+        "sceneId": "s7",
+        "purpose": "cta",
+        "intent": [
+          "cta",
+          "signup",
+          "close"
+        ],
+        "preferred": "scene.saas.cta",
+        "preferredName": "CtaSceneV51",
+        "fallback": "ui.saas.cta_hero",
+        "fallbackName": "CTAHero",
+        "score": 86.07,
+        "breakdown": {
+          "intent": 16.83,
+          "controllability": 17.11,
+          "visualQuality": 13.66,
+          "brand": 13.47,
+          "realism": 1.73,
+          "stability": 11.88,
+          "reuse": 2.72,
+          "speed": 4.21,
+          "cost": 2.97,
+          "privacy": 1.49,
+          "total": 86.07
+        },
+        "reason": "CtaSceneV51 (scene.saas.cta) scored 86.07/100 for 'cta' · deterministic · zero-key · stability:none/native · profile:inventory-erp",
+        "requiredInputs": [
+          "props-json",
+          "brand-tokens"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY",
+          "gpu-required:no GPU available"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 25,
+        "professionalWarnings": []
+      }
+    ],
+    "planWarnings": []
+  },
+  "semantic-os-explainer": {
+    "productType": "explainer",
+    "platform": "youtube",
+    "aspectRatio": "16:9",
+    "objective": "awareness",
+    "profile": "explainer",
+    "preferredStyle": "minimalist-diagram",
+    "decisions": [
+      {
+        "sceneId": "s1",
+        "purpose": "hook-title",
+        "intent": [
+          "title",
+          "open",
+          "statement"
+        ],
+        "preferred": "scene.om.hero_title",
+        "preferredName": "HeroTitle",
+        "fallback": "scene.saas.brand",
+        "fallbackName": "BrandSceneV51",
+        "score": 77.57,
+        "breakdown": {
+          "intent": 17.33,
+          "controllability": 15.2,
+          "visualQuality": 13.44,
+          "brand": 10.5,
+          "realism": 1.5,
+          "stability": 4.6,
+          "reuse": 5.6,
+          "speed": 4.5,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 77.57
+        },
+        "reason": "HeroTitle (scene.om.hero_title) scored 77.57/100 for 'hook-title' · deterministic · zero-key · stability:high/compatible · profile:explainer",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s2",
+        "purpose": "concept-diagram",
+        "intent": [
+          "diagram",
+          "explain",
+          "flow"
+        ],
+        "preferred": "tool.diagram_gen",
+        "preferredName": "DiagramGen",
+        "fallback": "scene.om.bar_chart",
+        "fallbackName": "BarChart",
+        "score": 75.58,
+        "breakdown": {
+          "intent": 17.33,
+          "controllability": 14.4,
+          "visualQuality": 11.2,
+          "brand": 6,
+          "realism": 3.6,
+          "stability": 8.2,
+          "reuse": 5.95,
+          "speed": 4,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 75.58
+        },
+        "reason": "DiagramGen (tool.diagram_gen) scored 75.58/100 for 'concept-diagram' · deterministic · zero-key · stability:n/a/n/a · profile:explainer",
+        "requiredInputs": [
+          "mermaid"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s3",
+        "purpose": "data-trend",
+        "intent": [
+          "data",
+          "trend",
+          "growth"
+        ],
+        "preferred": "scene.om.line_chart",
+        "preferredName": "LineChart",
+        "fallback": "scene.om.bar_chart",
+        "fallbackName": "BarChart",
+        "score": 84.08,
+        "breakdown": {
+          "intent": 20,
+          "controllability": 15.2,
+          "visualQuality": 12.48,
+          "brand": 10.5,
+          "realism": 1.5,
+          "stability": 9.4,
+          "reuse": 5.6,
+          "speed": 4.5,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 84.08
+        },
+        "reason": "LineChart (scene.om.line_chart) scored 84.08/100 for 'data-trend' · deterministic · zero-key · stability:none/compatible · profile:explainer",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s4",
+        "purpose": "code-demo",
+        "intent": [
+          "code",
+          "cli",
+          "demo"
+        ],
+        "preferred": "scene.om.terminal_scene",
+        "preferredName": "TerminalScene",
+        "fallback": "scene.om.bar_chart",
+        "fallbackName": "BarChart",
+        "score": 83.04,
+        "breakdown": {
+          "intent": 20,
+          "controllability": 15.36,
+          "visualQuality": 12.48,
+          "brand": 10.5,
+          "realism": 1.5,
+          "stability": 8.2,
+          "reuse": 5.6,
+          "speed": 4.5,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 83.04
+        },
+        "reason": "TerminalScene (scene.om.terminal_scene) scored 83.04/100 for 'code-demo' · deterministic · zero-key · stability:low/compatible · profile:explainer",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s5",
+        "purpose": "comparison",
+        "intent": [
+          "compare",
+          "vs"
+        ],
+        "preferred": "scene.om.bar_chart",
+        "preferredName": "BarChart",
+        "fallback": "scene.om.comparison",
+        "fallbackName": "ComparisonCard",
+        "score": 79.58,
+        "breakdown": {
+          "intent": 15.5,
+          "controllability": 15.2,
+          "visualQuality": 12.48,
+          "brand": 10.5,
+          "realism": 1.5,
+          "stability": 9.4,
+          "reuse": 5.6,
+          "speed": 4.5,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 79.58
+        },
+        "reason": "BarChart (scene.om.bar_chart) scored 79.58/100 for 'comparison' · deterministic · zero-key · stability:none/compatible · profile:explainer",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s6",
+        "purpose": "breakdown",
+        "intent": [
+          "data",
+          "breakdown",
+          "share"
+        ],
+        "preferred": "scene.om.pie_chart",
+        "preferredName": "PieChart",
+        "fallback": "comp.om.end_tag",
+        "fallbackName": "EndTag",
+        "score": 84.08,
+        "breakdown": {
+          "intent": 20,
+          "controllability": 15.2,
+          "visualQuality": 12.48,
+          "brand": 10.5,
+          "realism": 1.5,
+          "stability": 9.4,
+          "reuse": 5.6,
+          "speed": 4.5,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 84.08
+        },
+        "reason": "PieChart (scene.om.pie_chart) scored 84.08/100 for 'breakdown' · deterministic · zero-key · stability:none/compatible · profile:explainer",
+        "requiredInputs": [
+          "text",
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      },
+      {
+        "sceneId": "s7",
+        "purpose": "close",
+        "intent": [
+          "close",
+          "brand",
+          "cta"
+        ],
+        "preferred": "comp.om.end_tag",
+        "preferredName": "EndTag",
+        "fallback": "scene.saas.cta",
+        "fallbackName": "CtaSceneV51",
+        "score": 80.35,
+        "breakdown": {
+          "intent": 17.33,
+          "controllability": 14.4,
+          "visualQuality": 13.12,
+          "brand": 10.5,
+          "realism": 1.8,
+          "stability": 9.4,
+          "reuse": 4.9,
+          "speed": 4,
+          "cost": 3,
+          "privacy": 1.9,
+          "total": 80.35
+        },
+        "reason": "EndTag (comp.om.end_tag) scored 80.35/100 for 'close' · deterministic · zero-key · stability:none/compatible · profile:explainer",
+        "requiredInputs": [
+          "props-json"
+        ],
+        "missingDependencies": [
+          "missing-api-key:ELEVENLABS_API_KEY",
+          "missing-api-key:OPENAI_API_KEY",
+          "missing-api-key:GOOGLE_API_KEY",
+          "missing-api-key:DOUBAO_SPEECH_API_KEY",
+          "gpu-required:no GPU available",
+          "missing-api-key:FAL_KEY",
+          "missing-api-key:XAI_API_KEY",
+          "missing-api-key:OPENAI_API_KEY|FAL_KEY",
+          "missing-api-key:MODAL_LTX2_ENDPOINT_URL",
+          "missing-api-key:REPLICATE_API_TOKEN",
+          "missing-api-key:RUNWAY_API_KEY",
+          "missing-api-key:HIGGSFIELD_API_KEY",
+          "missing-api-key:SUNO_API_KEY",
+          "missing-api-key:FREESOUND_API_KEY"
+        ],
+        "estimatedCost": "free",
+        "deterministic": true,
+        "privacyRisk": 5,
+        "professionalWarnings": []
+      }
+    ],
+    "planWarnings": []
+  }
+}
