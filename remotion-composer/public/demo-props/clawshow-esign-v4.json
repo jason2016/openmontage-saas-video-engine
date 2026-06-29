@@ -43,9 +43,10 @@
       "camera": "pan-right",
       "props": {
         "url": "app.clawshow.ai",
-        "docTitle": "Service Agreement.pdf",
+        "docTitle": "Contrat de prestation de services.pdf",
         "toast": "PDF added",
-        "caption": "Upload any PDF"
+        "caption": "Upload any PDF",
+        "contract": true
       }
     },
     {
@@ -56,7 +57,7 @@
       "props": {
         "fromLabel": "ClawShow eSign",
         "toLabel": "Signer inbox",
-        "subject": "Please sign: Service Agreement.pdf",
+        "subject": "Please sign: Contrat de prestation de services.pdf",
         "caption": "Invite the signer"
       }
     },
@@ -78,10 +79,11 @@
       "durationSeconds": 6.0,
       "camera": "pan-right",
       "props": {
-        "docTitle": "Service Agreement",
+        "docTitle": "Contrat de prestation de services",
         "headline": "Sign on any device.",
         "subtitle": "Draw once. Bound everywhere — desktop, tablet or phone.",
-        "signedLabel": "Signed"
+        "signedLabel": "Signed",
+        "contract": true
       }
     },
     {
@@ -94,10 +96,10 @@
         "subtitle": "A tamper-evident trail behind every signature.",
         "fingerprint": "SHA-256  3f9a 7c12 b80e … a4d1",
         "auditEntries": [
-          { "action": "Document sent", "actor": "you@company.com", "timestamp": "09:42:11" },
-          { "action": "Opened by signer", "actor": "alex@client.com", "timestamp": "09:55:03" },
+          { "action": "Document sent", "actor": "demo-prestataire@example.com", "timestamp": "09:42:11" },
+          { "action": "Opened by signer", "actor": "demo-client@example.com", "timestamp": "09:55:03" },
           { "action": "Identity verified · OTP", "actor": "+1 ••• 4821", "timestamp": "09:55:46" },
-          { "action": "Signed", "actor": "Alex Doe", "timestamp": "09:56:20" }
+          { "action": "Signed", "actor": "Robin Hardy", "timestamp": "09:56:20" }
         ]
       }
     },

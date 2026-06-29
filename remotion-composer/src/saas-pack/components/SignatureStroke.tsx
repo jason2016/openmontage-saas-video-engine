@@ -2,7 +2,7 @@
 // a PDFViewer signature slot or a standalone pad. Path + ink color are props.
 import { interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { tokens as baseTokens, Tokens } from "../tokens";
-import { easeSettle } from "../hooks/easings";
+import { easeSignature } from "../hooks/easings";
 
 const DEFAULT_PATH =
   "M12 88 C 34 30, 66 28, 76 80 C 82 116, 58 120, 62 86 C 68 42, 104 40, 122 86 C 134 120, 152 118, 158 82 C 166 42, 198 48, 212 86 C 224 118, 246 112, 254 78 C 264 38, 300 50, 314 92 C 322 120, 346 116, 362 84";
@@ -36,7 +36,7 @@ export const SignatureStroke: React.FC<SignatureStrokeProps> = ({
   const progress = interpolate(t, [delaySeconds, delaySeconds + drawSeconds], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
-    easing: easeSettle,
+    easing: easeSignature,
   });
   const ink = color ?? theme.color.primary;
 

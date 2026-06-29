@@ -29,8 +29,28 @@ export interface Tokens {
   };
   motion: {
     easeSettle: [number, number, number, number];
+    // Named cinematic curve vocabulary — the reusable motion grammar every
+    // primitive consumes. One curve per *intent*, not one curve for everything:
+    //   entrance  calm reveal (expo-out)
+    //   pointer   human cursor — accelerate from rest, decelerate into target
+    //   press     quick, controlled button press
+    //   camera    gentle move that reaches rest early, then holds
+    //   exit      soft, slightly held fade-out
+    //   signature pen accelerates from rest and settles into the flourish
+    curve: {
+      entrance: [number, number, number, number];
+      pointer: [number, number, number, number];
+      press: [number, number, number, number];
+      camera: [number, number, number, number];
+      exit: [number, number, number, number];
+      signature: [number, number, number, number];
+    };
     spring: { damping: number; stiffness: number; mass: number };
     duration: { micro: number; standard: number; entrance: number; ambient: number };
+    // Pointer physics — how a synthetic cursor arrives, dwells and presses.
+    pointer: { dwellSeconds: number; pressDepth: number; pressSeconds: number };
+    // Camera — the fraction of a scene over which a move completes before holding.
+    camera: { settleFraction: number };
     stagger: number;
   };
   space: { safeInset: number; radiusCard: number; radiusChip: number; hairline: number };
@@ -62,8 +82,18 @@ export const tokens: Tokens = {
   },
   motion: {
     easeSettle: [0.16, 1, 0.3, 1],
+    curve: {
+      entrance: [0.16, 1, 0.3, 1], // expo-out — calm reveal, the default
+      pointer: [0.5, 0, 0.16, 1], // accelerate from rest, decelerate into target
+      press: [0.3, 0, 0.2, 1], // quick, controlled
+      camera: [0.22, 1, 0.34, 1], // settles early, then holds
+      exit: [0.4, 0, 0.7, 1], // soft, slightly held
+      signature: [0.4, 0, 0.28, 1], // pen from rest into the flourish
+    },
     spring: { damping: 24, stiffness: 120, mass: 1 },
     duration: { micro: 0.18, standard: 0.36, entrance: 0.6, ambient: 14 },
+    pointer: { dwellSeconds: 0.22, pressDepth: 0.86, pressSeconds: 0.16 },
+    camera: { settleFraction: 0.46 },
     stagger: 0.06,
   },
   space: { safeInset: 96, radiusCard: 20, radiusChip: 999, hairline: 1 },

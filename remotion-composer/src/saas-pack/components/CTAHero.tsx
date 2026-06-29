@@ -4,6 +4,11 @@
 import { tokens as baseTokens, Tokens } from "../tokens";
 import { useEntrance } from "../hooks/useEntrance";
 
+interface TrustSignal {
+  label: string;
+  icon?: "check" | "globe" | "code" | "server";
+}
+
 interface CTAHeroProps {
   theme?: Tokens;
   eyebrow?: string;
@@ -13,7 +18,16 @@ interface CTAHeroProps {
   badge?: string;
   buttonLabel?: string;
   url?: string;
+  trustSignals?: TrustSignal[];
 }
+
+const TrustIcon: React.FC<{ name: TrustSignal["icon"]; color: string }> = ({ name, color }) => {
+  const c = { width: 17, height: 17, viewBox: "0 0 24 24", fill: "none", stroke: color, strokeWidth: 2, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  if (name === "globe") return <svg {...c}><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>;
+  if (name === "code") return <svg {...c}><path d="M8 6l-5 6 5 6M16 6l5 6-5 6" /></svg>;
+  if (name === "server") return <svg {...c}><rect x="3" y="4" width="18" height="7" rx="2" /><rect x="3" y="13" width="18" height="7" rx="2" /><path d="M7 7.5h.01M7 16.5h.01" /></svg>;
+  return <svg {...c}><path d="M20 6 L9 17 L4 12" /></svg>;
+};
 
 export const CTAHero: React.FC<CTAHeroProps> = ({
   theme = baseTokens,
@@ -24,6 +38,7 @@ export const CTAHero: React.FC<CTAHeroProps> = ({
   badge,
   buttonLabel,
   url,
+  trustSignals,
 }) => {
   const title = headline ?? productName ?? "";
   const eEyebrow = useEntrance({ delaySeconds: 0.08 });
@@ -31,6 +46,7 @@ export const CTAHero: React.FC<CTAHeroProps> = ({
   const eBadge = useEntrance({ delaySeconds: 0.34 });
   const eTag = useEntrance({ delaySeconds: 0.46 });
   const eBtn = useEntrance({ delaySeconds: 0.6 });
+  const eTrust = useEntrance({ delaySeconds: 0.78 });
 
   return (
     <div style={{ textAlign: "center", maxWidth: 1300, fontFamily: theme.type.family }}>
@@ -133,6 +149,41 @@ export const CTAHero: React.FC<CTAHeroProps> = ({
             </div>
           )}
           {url && <div style={{ color: theme.color.textMuted, fontSize: 22, fontWeight: 500 }}>{url}</div>}
+        </div>
+      )}
+
+      {trustSignals && trustSignals.length > 0 && (
+        <div
+          style={{
+            opacity: eTrust.opacity,
+            transform: eTrust.transform,
+            marginTop: 34,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: 12,
+          }}
+        >
+          {trustSignals.map((sig) => (
+            <div
+              key={sig.label}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 9,
+                padding: "10px 16px",
+                borderRadius: 999,
+                background: theme.color.glassFill,
+                border: `1px solid ${theme.color.hairline}`,
+                color: theme.color.textSecondary,
+                fontSize: 18,
+                fontWeight: 500,
+              }}
+            >
+              <TrustIcon name={sig.icon} color={theme.color.successBright} />
+              {sig.label}
+            </div>
+          ))}
         </div>
       )}
     </div>

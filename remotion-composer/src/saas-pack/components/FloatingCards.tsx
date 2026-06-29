@@ -27,13 +27,16 @@ const DEFAULT_CARDS: FloatingCardSpec[] = [
   { label: "Offer.pdf", tone: "neutral" },
 ];
 
+// Peripheral anchors only: the cards frame the central headline + subtitle band
+// (roughly x 22–78, y 40–64) as a deliberate constellation and never cross the
+// type. Apple-grade composition ships zero text/object overlaps.
 const ANCHORS = [
-  { x: 27, y: 36 },
-  { x: 63, y: 28 },
-  { x: 45, y: 58 },
-  { x: 75, y: 62 },
-  { x: 33, y: 72 },
-  { x: 58, y: 44 },
+  { x: 18, y: 30 },
+  { x: 77, y: 24 },
+  { x: 13, y: 62 },
+  { x: 85, y: 56 },
+  { x: 27, y: 82 },
+  { x: 71, y: 80 },
 ];
 
 const DocGlyph: React.FC<{ color: string }> = ({ color }) => (
@@ -111,7 +114,7 @@ const FloatingCard: React.FC<{
 export const FloatingCards: React.FC<FloatingCardsProps> = ({
   theme = baseTokens,
   cards = DEFAULT_CARDS,
-  driftAmplitude = 1.3,
+  driftAmplitude = 1.0,
   delaySeconds = 0,
   stepSeconds = 0.12,
   stalledIndex,

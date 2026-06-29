@@ -17,6 +17,9 @@ interface PDFViewerProps {
   paper?: string;
   compact?: boolean;
   fill?: boolean; // stretch to fill the container (mobile full-screen doc)
+  // When provided, render this real document inside the paper instead of the
+  // deterministic placeholder lines/title/signature (e.g. <ContractDocument />).
+  document?: React.ReactNode;
 }
 
 export const PDFViewer: React.FC<PDFViewerProps> = ({
@@ -30,8 +33,10 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({
   paper = "#F7F8FA",
   compact = false,
   fill = false,
+  document,
 }) => {
   const enter = useEntrance({ delaySeconds, durationSeconds: theme.motion.duration.entrance, distance: 16 });
+  const usingDocument = !!document;
   // deterministic line widths (no Math.random)
   const widths = Array.from({ length: lines }, (_, i) => 52 + ((i * 37) % 44));
 
@@ -56,44 +61,51 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({
           background: paper,
           borderRadius: fill ? 0 : 10,
           boxShadow: fill ? "none" : "0 20px 60px rgba(0,0,0,0.35)",
-          padding: fill ? "62px 26px 26px" : compact ? "26px 24px" : "54px 60px",
+          padding: usingDocument ? 0 : fill ? "62px 26px 26px" : compact ? "26px 24px" : "54px 60px",
+          overflow: usingDocument ? "hidden" : undefined,
           display: "flex",
           flexDirection: "column",
-          gap: compact ? 11 : 17,
+          gap: usingDocument ? 0 : compact ? 11 : 17,
           color: "#0F172A",
           fontFamily: theme.type.family,
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-          <div style={{ fontWeight: 700, fontSize: compact ? 19 : 27 }}>{title}</div>
-          <div style={{ fontSize: 13, color: "#94A3B8", fontWeight: 700, letterSpacing: "0.08em" }}>PDF</div>
-        </div>
-        <div style={{ height: 1, background: "#E2E8F0" }} />
-        {widths.map((w, i) => (
-          <div key={i} style={{ height: compact ? 9 : 12, width: `${w}%`, borderRadius: 4, background: "#E5E9F0" }} />
-        ))}
-        {fill && <div style={{ flex: 1 }} />}
-        {signatureSlot && (
-          <div style={{ marginTop: fill ? 0 : compact ? 12 : 26, display: "flex", flexDirection: "column", gap: 8 }}>
-            <div style={{ fontSize: 12, color: "#94A3B8", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em" }}>
-              {signatureLabel}
+        {usingDocument ? (
+          document
+        ) : (
+          <>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+              <div style={{ fontWeight: 700, fontSize: compact ? 19 : 27 }}>{title}</div>
+              <div style={{ fontSize: 13, color: "#94A3B8", fontWeight: 700, letterSpacing: "0.08em" }}>PDF</div>
             </div>
-            <div
-              style={{
-                height: compact ? 54 : 84,
-                borderRadius: 8,
-                border: "1.5px dashed #CBD5E1",
-                background: "#FBFCFE",
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-              }}
-            >
-              {signed}
-            </div>
-          </div>
+            <div style={{ height: 1, background: "#E2E8F0" }} />
+            {widths.map((w, i) => (
+              <div key={i} style={{ height: compact ? 9 : 12, width: `${w}%`, borderRadius: 4, background: "#E5E9F0" }} />
+            ))}
+            {fill && <div style={{ flex: 1 }} />}
+            {signatureSlot && (
+              <div style={{ marginTop: fill ? 0 : compact ? 12 : 26, display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ fontSize: 12, color: "#94A3B8", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em" }}>
+                  {signatureLabel}
+                </div>
+                <div
+                  style={{
+                    height: compact ? 54 : 84,
+                    borderRadius: 8,
+                    border: "1.5px dashed #CBD5E1",
+                    background: "#FBFCFE",
+                    position: "relative",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    overflow: "hidden",
+                  }}
+                >
+                  {signed}
+                </div>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>

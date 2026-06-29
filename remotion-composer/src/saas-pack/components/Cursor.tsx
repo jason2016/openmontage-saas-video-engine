@@ -1,9 +1,11 @@
 // A synthetic pointer that guides the eye through UI. Travels from -> to over a
-// window, eased on the settle curve; or sits statically at x,y. Optional press
-// dip (pairs with MouseClick). Positions are percentages of the parent.
+// window on the *pointer* curve — accelerating from rest and decelerating into the
+// target like a real hand — or sits statically at x,y. An optional press performs a
+// quick down/up dip (pairs with MouseClick), and the pointer gains weight as it
+// presses (its shadow tightens). Positions are percentages of the parent.
 import { interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { tokens as baseTokens, Tokens } from "../tokens";
-import { easeSettle } from "../hooks/easings";
+import { easePointer } from "../hooks/easings";
 
 interface Point {
   x: number;
@@ -45,18 +47,31 @@ export const Cursor: React.FC<CursorProps> = ({
     const p = interpolate(t, [startSeconds, startSeconds + durationSeconds], [0, 1], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
-      easing: easeSettle,
+      easing: easePointer,
     });
     px = from.x + (to.x - from.x) * p;
     py = from.y + (to.y - from.y) * p;
   }
 
+  // Press physics: a quick dip and recovery around pressAtSeconds (down in the
+  // first 40% of the window, up over the rest) so the click reads as a real press.
+  const { pressDepth, pressSeconds } = baseTokens.motion.pointer;
   let pressScale = 1;
   if (pressed) {
-    pressScale = 0.85;
-  } else if (pressAtSeconds != null && Math.abs(t - pressAtSeconds) < 0.12) {
-    pressScale = 0.85;
+    pressScale = pressDepth;
+  } else if (pressAtSeconds != null) {
+    const start = pressAtSeconds - 0.02;
+    if (t >= start && t <= start + pressSeconds) {
+      const local = (t - start) / pressSeconds;
+      const amt = local < 0.4 ? local / 0.4 : 1 - (local - 0.4) / 0.6;
+      pressScale = 1 - (1 - pressDepth) * Math.max(0, Math.min(1, amt));
+    }
   }
+  // As the pointer presses, it gains weight: its drop-shadow tightens toward the
+  // surface, reading as physical contact rather than a flat scale.
+  const dip = (1 - pressScale) / (1 - pressDepth);
+  const shadowY = 4 - 2 * dip;
+  const shadowBlur = 8 - 3 * dip;
 
   return (
     <div
@@ -70,7 +85,7 @@ export const Cursor: React.FC<CursorProps> = ({
         pointerEvents: "none",
       }}
     >
-      <svg width={size} height={size} viewBox="0 0 24 24" style={{ filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.55))" }}>
+      <svg width={size} height={size} viewBox="0 0 24 24" style={{ filter: `drop-shadow(0 ${shadowY}px ${shadowBlur}px rgba(0,0,0,0.55))` }}>
         <path
           d="M5.5 2.6 L5.5 20.8 L10.1 16.4 L13.0 22.6 L15.6 21.4 L12.8 15.4 L18.7 15.4 Z"
           fill="#FFFFFF"

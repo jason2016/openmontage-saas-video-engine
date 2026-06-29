@@ -166,11 +166,16 @@ def scenes_table_md(cfg: dict, scene_cfg: dict, animation: dict) -> str:
 
 
 def build_saas_props(out: str, cfg: dict, theme: dict) -> dict:
-    """Map a product config into the data-driven SaasPromo scene graph (7 beats
-    using the saas-pack component library). Demo specifics fall back to generic
-    defaults so a minimal config still produces a rich video."""
+    """Map a product config into the data-driven SaasPromo scene graph: the
+    launch-grade 9-beat eSign narrative (brand cold-open, then the 8 product
+    beats: problem, upload, invite, OTP, sign, audit, AES eIDAS, CTA) built from
+    the saas-pack component library, with a per-beat camera move. Demo specifics
+    fall back to product-accurate defaults so a minimal config still produces a
+    complete, premium video; projects override per beat for polish."""
     primary = cfg.get("primaryColor", theme["primary"])
+    primary_bright = cfg.get("primaryBrightColor", "#60A5FA")
     success = cfg.get("successColor", theme["success"])
+    success_bright = cfg.get("successBrightColor", "#4ADE80")
     canvas = cfg.get("backgroundColor", theme["background"])
     name = cfg.get("productName", "Your product")
     website = cfg.get("website", "")
@@ -184,50 +189,93 @@ def build_saas_props(out: str, cfg: dict, theme: dict) -> dict:
     host = website.split("/")[0] if website else "example.com"
     app_url = demo.get("appUrl") or ("app." + host)
     doc_title = demo.get("docTitle", "Service Agreement.pdf")
+    doc_short = demo.get("mobileDocTitle") or doc_title.rsplit(".", 1)[0]
     inbox_label = demo.get("inboxLabel", "Signer inbox")
     subject = demo.get("subject") or ("Please sign: " + doc_title)
+    phone_hint = demo.get("phoneHint", "+1 ••• 4821")
     otp = demo.get("otp", "284913")
     fingerprint = demo.get("fingerprint", "SHA-256  3f9a 7c12 b80e … a4d1")
     button_label = demo.get("buttonLabel", "Start free")
     brand_tagline = cfg.get("brandTagline") or beat("solution").get("headline", "")
 
+    default_cards = [
+        {"label": "NDA.pdf", "tone": "neutral"},
+        {"label": doc_title.replace(".pdf", "") + ".pdf", "tone": "primary"},
+        {"label": "Invoice.pdf", "tone": "neutral"},
+        {"label": "Agreement.pdf", "tone": "neutral"},
+        {"label": "Offer.pdf", "tone": "neutral"},
+    ]
+    default_audit = [
+        {"action": "Document sent", "actor": "you@company.com", "timestamp": "09:42:11"},
+        {"action": "Opened by signer", "actor": "alex@client.com", "timestamp": "09:55:03"},
+        {"action": "Identity verified · OTP", "actor": phone_hint, "timestamp": "09:55:46"},
+        {"action": "Signed", "actor": "Alex Doe", "timestamp": "09:56:20"},
+    ]
+    default_standards = [
+        {"label": "AES", "sub": "Advanced e-signature"},
+        {"label": "eIDAS", "sub": "EU regulation"},
+        {"label": "SHA-256", "sub": "Document hash"},
+        {"label": "OTP 2FA", "sub": "Identity proof"},
+    ]
+
     scenes = [
-        {"id": "problem", "type": "problem", "durationSeconds": 6.0, "props": {
-            "headline": beat("problem").get("headline", "Still doing it the hard way?"),
-            "subtitle": beat("problem").get("subtitle", ""),
-            "stalledIndex": 0,
-        }},
-        {"id": "brand", "type": "brand", "durationSeconds": 6.0, "props": {
+        {"id": "brand", "type": "brand", "durationSeconds": 3.6, "camera": "pull", "props": {
             "eyebrow": cfg.get("eyebrow", ""),
             "productName": name,
             "tagline": brand_tagline,
         }},
-        {"id": "upload", "type": "upload", "durationSeconds": 7.5, "props": {
+        {"id": "problem", "type": "problem", "durationSeconds": 5.6, "camera": "push", "props": {
+            "headline": beat("problem").get("headline", "Still doing it the hard way?"),
+            "subtitle": beat("problem").get("subtitle", ""),
+            "cards": demo.get("cards", default_cards),
+            "stalledIndex": demo.get("stalledIndex", 1),
+        }},
+        {"id": "upload", "type": "upload", "durationSeconds": 6.0, "camera": "pan-right", "props": {
             "url": app_url, "docTitle": doc_title, "caption": "Upload any PDF", "toast": "PDF added",
         }},
-        {"id": "send", "type": "send", "durationSeconds": 7.0, "props": {
+        {"id": "invite", "type": "invite", "durationSeconds": 5.6, "camera": "pan-left", "props": {
             "fromLabel": name, "toLabel": inbox_label, "subject": subject,
-            "caption": "Send in seconds", "secure": True,
+            "caption": "Invite the signer", "secure": True,
         }},
-        {"id": "sign", "type": "sign", "durationSeconds": 8.5, "props": {
-            "docTitle": demo.get("mobileDocTitle", "Agreement"), "otp": otp,
-            "caption": "Sign anywhere — verified by OTP", "verifiedLabel": "Identity verified",
+        {"id": "otp", "type": "otp", "durationSeconds": 5.6, "camera": "push", "props": {
+            "phoneHint": phone_hint, "otp": otp,
+            "headline": beat("otp").get("headline", "One code. One signer."),
+            "verifiedLabel": "Identity verified",
         }},
-        {"id": "trust", "type": "trust", "durationSeconds": 8.0, "props": {
-            "headline": beat("security").get("headline", "Audit-ready by design."),
-            "subtitle": beat("security").get("subtitle", ""),
-            "badge": cta.get("badge", "AES eIDAS compliant"),
+        {"id": "sign", "type": "sign", "durationSeconds": 6.0, "camera": "pan-right", "props": {
+            "docTitle": doc_short,
+            "headline": beat("sign").get("headline", "Sign on any device."),
+            "subtitle": beat("sign").get("subtitle", "Draw once. Bound everywhere — desktop, tablet or phone."),
+            "signedLabel": "Signed",
+        }},
+        {"id": "audit", "type": "audit", "durationSeconds": 6.0, "camera": "push", "props": {
+            "headline": beat("audit").get("headline", "Every step, recorded."),
+            "subtitle": beat("audit").get("subtitle", "A tamper-evident trail behind every signature."),
             "fingerprint": fingerprint,
+            "auditEntries": demo.get("auditEntries", default_audit),
         }},
-        {"id": "cta", "type": "cta", "durationSeconds": 7.5, "props": {
+        {"id": "aes", "type": "aes", "durationSeconds": 5.6, "camera": "pull", "props": {
+            "eyebrow": beat("aes").get("eyebrow", "Compliance"),
+            "headline": beat("aes").get("headline", "AES eIDAS ready."),
+            "subtitle": beat("aes").get("subtitle", "Advanced electronic signatures, aligned to EU eIDAS — built in, not bolted on."),
+            "standards": demo.get("standards", default_standards),
+        }},
+        {"id": "cta", "type": "cta", "durationSeconds": 6.0, "camera": "push", "props": {
             "productName": name, "badge": cta.get("badge", ""),
             "tagline": cta.get("tagline", ""), "buttonLabel": button_label, "url": website,
         }},
     ]
-    if demo.get("auditEntries"):
-        scenes[5]["props"]["auditEntries"] = demo["auditEntries"]
 
-    return {"brand": {"primary": primary, "success": success, "canvas": canvas}, "scenes": scenes}
+    return {
+        "brand": {
+            "primary": primary,
+            "primaryBright": primary_bright,
+            "success": success,
+            "successBright": success_bright,
+            "canvas": canvas,
+        },
+        "scenes": scenes,
+    }
 
 
 def main() -> int:

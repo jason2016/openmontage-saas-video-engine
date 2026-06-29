@@ -27,7 +27,7 @@ export const ProblemScene: React.FC<ProblemSceneProps> = ({ theme, headline, sub
       <AbsoluteFill
         style={{
           background:
-            "radial-gradient(ellipse 55% 45% at center, rgba(10,14,26,0.82) 0%, rgba(10,14,26,0.4) 45%, transparent 75%)",
+            "radial-gradient(ellipse 62% 52% at center, rgba(10,14,26,0.93) 0%, rgba(10,14,26,0.6) 40%, transparent 72%)",
         }}
       />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: 120 }}>

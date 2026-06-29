@@ -10,7 +10,7 @@
     {
       "id": "brand",
       "type": "brand",
-      "durationSeconds": 3.6,
+      "durationSeconds": 4.4,
       "camera": "pull",
       "props": {
         "eyebrow": "Standalone PDF signing",
@@ -21,11 +21,11 @@
     {
       "id": "problem",
       "type": "problem",
-      "durationSeconds": 5.6,
+      "durationSeconds": 6.0,
       "camera": "push",
       "props": {
-        "headline": "Paper contracts are slow.",
-        "subtitle": "Print, sign, scan, resend — deals stall for days.",
+        "headline": "Contracts shouldn't wait.",
+        "subtitle": "Print, sign, scan, resend — every handoff costs you days.",
         "cards": [
           { "label": "NDA.pdf", "tone": "neutral" },
           { "label": "Contract.pdf", "tone": "primary" },
@@ -39,25 +39,33 @@
     {
       "id": "upload",
       "type": "upload",
-      "durationSeconds": 6.0,
+      "durationSeconds": 7.0,
       "camera": "pan-right",
       "props": {
         "url": "app.clawshow.ai",
-        "docTitle": "Service Agreement.pdf",
+        "docTitle": "Contrat de prestation de services.pdf",
         "toast": "PDF added",
-        "caption": "Upload any PDF"
+        "caption": "Open any contract",
+        "contract": true,
+        "workspace": true
       }
     },
     {
       "id": "invite",
-      "type": "invite",
-      "durationSeconds": 5.6,
+      "type": "invite-flow",
+      "durationSeconds": 6.0,
       "camera": "pan-left",
       "props": {
-        "fromLabel": "ClawShow eSign",
-        "toLabel": "Signer inbox",
-        "subject": "Please sign: Service Agreement.pdf",
-        "caption": "Invite the signer"
+        "eyebrow": "Invitation",
+        "headline": "Sent in one click.",
+        "subtitle": "A secure, single-use signing link — and you track every step until it's signed.",
+        "docTitle": "Contrat de prestation de services.pdf",
+        "steps": [
+          { "label": "Preparing invitation", "sub": "Generating secure signing link", "icon": "spark" },
+          { "label": "Email sent", "sub": "To demo-client@example.com", "icon": "mail" },
+          { "label": "Signer inbox", "sub": "Delivered · message opened", "icon": "inbox" },
+          { "label": "Awaiting signature", "sub": "Single-use link · expires in 7 days", "icon": "clock" }
+        ]
       }
     },
     {
@@ -75,13 +83,15 @@
     {
       "id": "sign",
       "type": "sign",
-      "durationSeconds": 6.0,
+      "durationSeconds": 7.5,
       "camera": "pan-right",
       "props": {
-        "docTitle": "Service Agreement",
+        "docTitle": "Contrat de prestation de services",
         "headline": "Sign on any device.",
         "subtitle": "Draw once. Bound everywhere — desktop, tablet or phone.",
-        "signedLabel": "Signed"
+        "signedLabel": "Signed",
+        "contract": true,
+        "autoscroll": true
       }
     },
     {
@@ -94,10 +104,10 @@
         "subtitle": "A tamper-evident trail behind every signature.",
         "fingerprint": "SHA-256  3f9a 7c12 b80e … a4d1",
         "auditEntries": [
-          { "action": "Document sent", "actor": "you@company.com", "timestamp": "09:42:11" },
-          { "action": "Opened by signer", "actor": "alex@client.com", "timestamp": "09:55:03" },
+          { "action": "Document sent", "actor": "demo-prestataire@example.com", "timestamp": "09:42:11" },
+          { "action": "Opened by signer", "actor": "demo-client@example.com", "timestamp": "09:55:03" },
           { "action": "Identity verified · OTP", "actor": "+1 ••• 4821", "timestamp": "09:55:46" },
-          { "action": "Signed", "actor": "Alex Doe", "timestamp": "09:56:20" }
+          { "action": "Signed", "actor": "Robin Hardy", "timestamp": "09:56:20" }
         ]
       }
     },
@@ -121,14 +131,19 @@
     {
       "id": "cta",
       "type": "cta",
-      "durationSeconds": 6.0,
+      "durationSeconds": 6.8,
       "camera": "push",
       "props": {
         "productName": "ClawShow eSign",
-        "badge": "AES eIDAS compliant",
         "tagline": "Send. Sign. Done.",
-        "buttonLabel": "Start free",
-        "url": "clawshow.ai/esign"
+        "buttonLabel": "Request Demo",
+        "url": "clawshow.ai/esign",
+        "trustSignals": [
+          { "label": "AES eIDAS compliant", "icon": "check" },
+          { "label": "Works in browser", "icon": "globe" },
+          { "label": "API available", "icon": "code" },
+          { "label": "French hosting", "icon": "server" }
+        ]
       }
     }
   ]

@@ -19,8 +19,8 @@ console.log("Bundled OK");
 const composition = await selectComposition({ serveUrl, id: "SaasPromo", inputProps });
 console.log("duration frames:", composition.durationInFrames);
 
-// near-mid frame per scene (problem,brand,upload,send,sign,trust,cta)
-const shots = { problem: 90, brand: 270, upload: 480, send: 690, sign: 960, trust: 1170, cta: 1410 };
+// near-mid frame per scene (brand,problem,upload,invite,otp,sign,audit,aes,cta)
+const shots = { brand: 60, problem: 195, upload: 380, invite: 555, otp: 735, sign: 890, audit: 1080, aes: 1235, cta: 1420 };
 let ok = 0;
 for (const [label, frame] of Object.entries(shots)) {
   try {
